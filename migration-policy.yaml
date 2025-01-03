@@ -1,0 +1,9 @@
+apiVersion: migrations.kubevirt.io/v1alpha1
+kind: MigrationPolicy
+metadata:
+  name: slow-mig-policy
+spec:
+  bandwidthPerMigration: 1Ki
+  selectors:
+    virtualMachineInstanceSelector:
+      kubevirt.io/vm: vm-dv
